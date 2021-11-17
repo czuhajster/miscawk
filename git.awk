@@ -29,4 +29,7 @@ function incrementTag(previousTag, step) {
    return incrementedTag;
 }
 
-{iv = incrementTag($0, part); print iv}
+# Typical usage:
+# Assign value from 0 to 2 to `part` using -v option.
+# Example: `awk -v part=0 -f <this file>`
+{newTag = incrementTag($0, part); print newTag}
